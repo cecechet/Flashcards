@@ -1,76 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mod-ev-x8J">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="fT0-x9-hGh">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="Mod-ev-x8J" customClass="ViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7uZ-v0-SsO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4U2-JA-gdm">
-                                <rect key="frame" x="55" y="177" width="305" height="180"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brasília" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UR-Cd-i7v">
+                                <rect key="frame" x="81" y="197" width="253" height="202"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brasília" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cd3-vF-r4J">
-                                        <rect key="frame" x="0.0" y="3" width="305" height="177"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" systemColor="opaqueSeparatorColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is the capital of Brazil?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4O-st-tQW">
-                                        <rect key="frame" x="0.0" y="0.0" width="305" height="180"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                        <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
-                                        <size key="shadowOffset" width="8" height="-1"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <gestureRecognizers/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is the capital of Brazil?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKi-SK-IDc">
+                                <rect key="frame" x="81" y="204" width="253" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qld-GG-Khk">
+                                <rect key="frame" x="178" y="666" width="76" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="47"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="mkQ-uZ-1F1" appends="YES" id="8cL-Lw-0yb"/>
+                                    <segue destination="oBF-Ym-Mp2" kind="presentation" destinationCreationSelector="prepare:" id="OXT-tQ-5Eh"/>
                                 </connections>
-                            </view>
+                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="OCj-2m-2Qj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9wv-Ua-MVX" appends="YES" id="W04-28-QXE"/>
+                        </connections>
                     </view>
                     <connections>
-                        <outlet property="backLabel" destination="Cd3-vF-r4J" id="qhY-tf-uc3"/>
-                        <outlet property="frontLabel" destination="p4O-st-tQW" id="2Jk-fE-qEt"/>
+                        <outlet property="backLabel" destination="5UR-Cd-i7v" id="tiO-RI-mBZ"/>
+                        <outlet property="frontLabel" destination="aKi-SK-IDc" id="xhe-cd-oDL"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="mkQ-uZ-1F1">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCP-Sn-Zya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9wv-Ua-MVX">
                     <connections>
-                        <action selector="didTapOnFlashcard:" destination="BYZ-38-t0r" id="LxR-px-6lg"/>
+                        <action selector="didTapFlashcard:" destination="Mod-ev-x8J" id="xZQ-rZ-N6X"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
+            <point key="canvasLocation" x="163.768115942029" y="-57.589285714285708"/>
+        </scene>
+        <!--Creation View Controller-->
+        <scene sceneID="3h9-E8-B2t">
+            <objects>
+                <viewController id="qPQ-0t-pCW" customClass="CreationViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JPJ-0X-aGe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lu2-yl-YhB">
+                                <rect key="frame" x="77" y="201" width="287" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9D-zu-eRZ">
+                                <rect key="frame" x="77" y="306" width="287" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6j8-HL-IZ5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2mR-hd-vxx">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="o9y-HZ-Gqh">
+                            <connections>
+                                <action selector="didTapOnCancel:" destination="qPQ-0t-pCW" id="VK0-KP-Yt5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="DkD-Fp-Cu3">
+                            <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="didTapOnDone:" destination="qPQ-0t-pCW" id="sej-l0-c3Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="e9D-zu-eRZ" id="6OL-aF-ZgY"/>
+                        <outlet property="questionTextField" destination="Lu2-yl-YhB" id="Lg0-di-jYf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gms-uT-gh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820.289855072464" y="8.7053571428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LMP-w6-zEW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oBF-Ym-Mp2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dJp-qW-Y28">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qPQ-0t-pCW" kind="relationship" relationship="rootViewController" id="cPa-lf-N2g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AdL-vk-xsh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910.14492753623199" y="8.7053571428571423"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
