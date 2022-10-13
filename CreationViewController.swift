@@ -13,12 +13,12 @@ class CreationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
     @IBOutlet weak var answerTextField: UITextField!
     @IBOutlet weak var questionTextField: UITextField!
+    
     @IBAction func didTapOnCancel(_ sender: Any) {
         dismiss(animated: true)
     }

@@ -45,6 +45,28 @@
                                     <segue destination="oBF-Ym-Mp2" kind="presentation" destinationCreationSelector="prepare:" id="OXT-tQ-5Eh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAw-c4-8Zm">
+                                <rect key="frame" x="32" y="735" width="86" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Prev">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnPrev:" destination="Mod-ev-x8J" eventType="touchUpInside" id="wO2-7m-EcK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPr-bP-hTz">
+                                <rect key="frame" x="301" y="752" width="93" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="Mod-ev-x8J" eventType="touchUpInside" id="azz-nB-Q7s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OCj-2m-2Qj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -56,6 +78,8 @@
                     <connections>
                         <outlet property="backLabel" destination="5UR-Cd-i7v" id="tiO-RI-mBZ"/>
                         <outlet property="frontLabel" destination="aKi-SK-IDc" id="xhe-cd-oDL"/>
+                        <outlet property="nextButton" destination="vPr-bP-hTz" id="iBB-fL-prp"/>
+                        <outlet property="prevButton" destination="wAw-c4-8Zm" id="cNL-8s-9SG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCP-Sn-Zya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
