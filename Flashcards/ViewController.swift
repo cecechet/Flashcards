@@ -83,9 +83,9 @@ class ViewController: UIViewController {
         
         // Disable nprev button if at the beginning
         if currentIndex == flashcards.count - 1 {
-            prevButton.isEnabled = false
-        } else {
             prevButton.isEnabled = true
+        } else {
+            prevButton.isEnabled = false
         }
     }
         
