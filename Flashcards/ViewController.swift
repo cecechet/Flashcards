@@ -15,6 +15,7 @@ struct Flashcard {
 class ViewController: UIViewController {
 
   
+    @IBOutlet weak var card: UIView!
     @IBOutlet weak var backLabel: UILabel!
     @IBOutlet weak var frontLabel: UILabel!
     @IBOutlet weak var prevButton: UIButton!
@@ -46,11 +47,41 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapFlashcard(_ sender: Any) {
-        frontLabel.isHidden = true
+        flipFlashcard()
     }
     
+    func flipFlashcard () {
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            self.frontLabel.isHidden = !self.frontLabel.isHidden
+            })
+    }
+    
+    func animateCardOut() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)}, completion: {finished in
+                
+                //Update Labels
+                self.updateLabels()
+                
+                //Run other animation
+                self.animateCardIn()
+            })
+    }
+    
+    func animateCardIn() {
+        // Start on the right side (don't animate this)
+            card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        
+        // Animate card going back to its original position
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity
+        }
+    }
     
     @IBAction func didTapOnPrev(_ sender: Any) {
+        //animate card
+        animateCardIn()
+        
         // Decrease current index
         currentIndex = currentIndex - 1
         
@@ -59,10 +90,12 @@ class ViewController: UIViewController {
         
         // Update buttons
         updateNextPrevButtons()
+        
     }
     
     
     @IBAction func didTapOnNext(_ sender: Any) {
+        
         // Increase current index
         currentIndex = currentIndex + 1
         
@@ -71,6 +104,13 @@ class ViewController: UIViewController {
         
         // Update buttons
         updateNextPrevButtons()
+        
+        //animate card
+        animateCardOut()
+        
+       
+        
+        
     }
     
     func updateNextPrevButtons() {
@@ -81,7 +121,7 @@ class ViewController: UIViewController {
             nextButton.isEnabled = true
         }
         
-        // Disable nprev button if at the beginning
+        // Disable prev button if at the beginning
         if currentIndex == flashcards.count - 1 {
             prevButton.isEnabled = true
         } else {
@@ -142,8 +182,7 @@ class ViewController: UIViewController {
     func saveAllFlashcardsToDisk() {
         
         // From flashcard array to dictionary arrray
-        let dictionaryArray = flashcards.map { (card) -> [String:String] in
-            return ["question": card.question, "answer": card.answer]
+        let dictionaryArray = flashcards.map { (card) -> [String:String] in return ["question": card.question, "answer": card.answer]
         }
         
         // Save array on disk using UserDefaults
@@ -156,7 +195,7 @@ class ViewController: UIViewController {
     }
     func readSavedFlashcards() {
         // Read dictionary array from disk (if any)
-        if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcarsds") as? [[String: String]] {
+        if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcards") as? [[String: String]] {
             
             // In here we know for sure we have a dictionary array
             let savedCards = dictionaryArray.map { dictionary -> Flashcard in
